@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "text-to-speech-project-mmu",
+  "private_key_id": "b433f405c098087017230a54f8d0aca26df8af6f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDnfdJ/GFvUlBfp\n+Mj2Tsw97mXFHwebDJ7+0nsn3ywY6GeBWk6c1sGgLTZ/ZB9OskqMMKzsftwUx9ld\n1RT2Tf3dFNGR6abfAe3Yeu+UXafcpGDPm6VDM8OHbE/znd7pbLfrIWTaS9g5zZWI\ndJfmMCZl03hcldHLavOEm0/6EDC9UWRz0NFpn38J+ELcBMtedG7i8HMEWcz+6wOT\nC0cp+4n1/ufdr6GEXzDLDstMQANfZILfqrrnqtcOCm0XADcP3qW6LSLXsKE2BmJu\nMUdtraPXPL3yPEeoY5sguCtkI6cV0rT3lwELwUxHx2loA2OeI/1upiJuSiyw7iOi\nEoAPSZtjAgMBAAECggEADeY5IFZ3FRF7Shoc/uUGUGWjCK3vR/j/Bu/eYyt8O1ag\n+FxSwgoHADYWwplhY9lCrp4xk9WeI0VIoOCtbIiMSJz6ZFdyJIu6GzhucCsbbB0W\njwCacKmIAPaY6li9TKixdlW/93d8WSQl6VaO1Exp0c1bubtpKFyYmIq2x533Pzap\npHkSvMrVqtIzj8LjkqBgr5ush/joRbHsc1gfHyrWrsFH8dLa2NwmSFROw/dmemC6\nn4O+9qq2vEZTRgS1XtogXWDKNv0FbP36loeIGLs5NFXwqv4GrADaNAtX/mdH7sDq\nl1N6OxqNEssHyIwv68Gyc+AFI9z7hIO+mdk5BAZE+QKBgQD02tBchapxXpdXDl5M\nmkOnVTfA0rZeKfVksWDX+Y73IzBaaxxZYsPuqFsHasWKmOytpH3qO5Y54h0lMHAa\nzLNM33sot9hmv3xFOu9NK2BHMJnpzJpXe2Mc0MOi4k/uPfZzCmP26B8hhkmyVgbJ\noHU61XL6lXfNZcMvNBpQHU5ZvQKBgQDyB0rNox+Bfl4ZR90OcbOGLAwXHt+YTJY8\nwgLAbUFR/Oa1Uh/08RL0S8eqnuoEE74YOWT+UMLgPwy7nXCY8MZMlziKsiSUHGiz\ntZ/hITt5sfJUDcbISzgrPbQfyBInssmg9ZZYfsryQ4ibcssxUU5U8JsdtKRaHywN\nohd9FkPLnwKBgDFRIUaBZaMP+kt+iV/EcnvxnhkoV7L/oH13fJoDmdgNLmAH0t3u\nFqirICqORttzkbgnuXTEK63c7SHgb7P2JucE3DmHTf7j8pO/GxPf+LReBaIho7Sb\nFYtoQP89tfu2Xz0sipXgiuSlt5JD4Xoa54HCHDZ8hHTKWlXXmLUqMe3BAoGBALwH\nhErcNybgaPSVCx0koodTgxUXTDjDD1kmlQKwHrY2l3o40lD2VXZrxTQ9/6qpN98T\n/+1ACxYyhY7gktCPBlAMj8XY/mf+5izvpsU9jzpNT+mTRmLnZTza1Cx4v/oNgW3G\nPkaEQuESLHgwJ8Ip24RL5QagB6toWk5BJqRsfsEbAoGBAM3MwjdiRWznM6dRdx9D\nsWw265tffr69SFn6JwkTbgDkmfH5ABGveUibh3mIoVjhU8tdNBkU6r+RDxR7+FpB\ns8kYtkn3XTEBH8cL2iT62nsU1YQueyAvzteHv4999ziM4nsGq9aYeoy6jAZU2eGu\nyt/Ee5mNIVQf+q3wtnnPqLkL\n-----END PRIVATE KEY-----\n",
+  "client_email": "davidhalpinroberts@text-to-speech-project-mmu.iam.gserviceaccount.com",
+  "client_id": "100494540584634338514",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/davidhalpinroberts%40text-to-speech-project-mmu.iam.gserviceaccount.com"
+}
