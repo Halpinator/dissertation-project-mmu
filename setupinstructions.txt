@@ -3,4 +3,4 @@ export TURTLEBOT3_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 //Run this to run the test code
-ros dissertation-project-mmu turtlebot_test.launch
+roslaunch dissertation-project-mmu turtlebot_test.launch
