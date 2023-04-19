@@ -4,10 +4,8 @@ from pvrecorder import PvRecorder
 import pyaudio
 import wave
 
-
-
 # the file name output you want to record into
-filename = "recorded.wav"
+filename = "recievedMessage.wav"
 # set the chunk size of 1024 samples
 chunk = 1024
 # sample format
@@ -16,7 +14,7 @@ FORMAT = pyaudio.paInt16
 channels = 1
 # 44100 samples per second
 sample_rate = 44100
-record_seconds = 5
+record_seconds = 4
 # initialize PyAudio object
 p = pyaudio.PyAudio()
 
