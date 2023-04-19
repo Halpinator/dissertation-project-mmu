@@ -1,22 +1,28 @@
+#!/usr/bin/env python3
+
 import rospy
 from geometry_msgs.msg import Twist
 
-class turtlebot_controller():
-    def __init__(self):
-        rospy.init.node('Turtlebot_control_node', anonymous=True)
+def turtlebot3_spin():
+    rospy.init_node('turtlebot3_spin', anonymous=True)
+    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
 
-        rospy.loginfo('To stop turtlebot, press ctrl+c')
-        rospy.on_shutdown(self.shutdown)
+    rate = rospy.Rate(10)  # 10 Hz
 
-        self.cmd_vel_object = rospy.Publisher('', msg_type, queue_size=)
+    while not rospy.is_shutdown():
+        spin_msg = Twist()
+        spin_msg.linear.x = 0.0
+        spin_msg.linear.y = 0.0
+        spin_msg.linear.z = 0.0
+        spin_msg.angular.x = 0.0
+        spin_msg.angular.y = 0.0
+        spin_msg.angular.z = 1.0  # Positive value will make the robot spin clockwise
 
+        pub.publish(spin_msg)
+        rate.sleep()
 
-    def shutdown((self)):
-        #shutdown code
-        
-
-    if __name__ == '__main__':
-        try:
-            turtlebot_controller()
-        except:
-            rosp.loginfo('Node Terminated')
+if __name__ == '__main__':
+    try:
+        turtlebot3_spin()
+    except rospy.ROSInterruptException:
+        pass
