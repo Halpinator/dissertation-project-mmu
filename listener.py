@@ -1,9 +1,11 @@
-#Listens for wake word and records 5 seconds of audio after it is heard
+#Listens for wake word and records 4 seconds of audio after it is heard
 import pvporcupine
 from pvrecorder import PvRecorder
 import pyaudio
 import wave
 import speech_recognition as sr
+import rospy
+from std_msgs.msg import String
 
 # the file name output you want to record into
 filename = "recievedMessageAudio.wav"

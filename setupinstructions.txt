@@ -4,3 +4,4 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 //Run this to run the test code
 roslaunch dissertation-project-mmu turtlebot_test.launch
+roslaunch dissertation-project-mmu turtlebot_voice_control.launch

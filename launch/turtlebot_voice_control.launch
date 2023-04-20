@@ -1,0 +1,13 @@
+<launch>
+    <!-- Set the dissertation-project-mmu package path -->
+    <arg name="turtlebot_voice_control_package_path" default="$(find dissertation-project-mmu)"/>
+
+    <!-- Run the listener node -->
+    <node name="listener_node" pkg="dissertation-project-mmu" type="listener_node.py" output="screen"/>
+
+    <!-- Run the speaker node -->
+    <node name="speaker_node" pkg="dissertation-project-mmu" type="speaker_node.py" output="screen"/>
+
+    <!-- Run the TurtleBot3 controller node -->
+    <node name="turtlebot_controller" pkg="dissertation-project-mmu" type="turtlebot_controller.py" output="screen"/>
+</launch>
