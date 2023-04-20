@@ -3,9 +3,10 @@ import pvporcupine
 from pvrecorder import PvRecorder
 import pyaudio
 import wave
+import speech_recognition as sr
 
 # the file name output you want to record into
-filename = "recievedMessage.wav"
+filename = "recievedMessageAudio.wav"
 # set the chunk size of 1024 samples
 chunk = 1024
 # sample format
@@ -27,6 +28,18 @@ porcupine = pvporcupine.create(
 )
 
 recorder = PvRecorder(device_index=-1, frame_length=porcupine.frame_length)
+
+def transcribe_audio(filename):
+    recognizer = sr.Recognizer()
+    with sr.AudioFile(filename) as source:
+        audio = recognizer.record(source)
+    try:
+        text = recognizer.recognize_google(audio)
+        return text
+    except sr.UnknownValueError:
+        print("Google Speech Recognition could not understand audio")
+    except sr.RequestError as e:
+        print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
 try:
     recorder.start()
@@ -73,6 +86,10 @@ try:
             wf.writeframes(b"".join(frames))
             # close the file
             wf.close()
+
+            # Transcribe audio
+            transcribed_text = transcribe_audio(filename)
+            print("Transcribed text:", transcribed_text)
 
             # Start the recorder again
             recorder.start()
