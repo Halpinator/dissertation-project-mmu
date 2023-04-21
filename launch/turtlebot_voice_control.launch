@@ -1,4 +1,6 @@
 <launch>
+    <param name="robot_name" value="alexa" />
+
     <!-- Set the dissertation-project-mmu package path -->
     <arg name="turtlebot_voice_control_package_path" default="$(find dissertation-project-mmu)"/>
 

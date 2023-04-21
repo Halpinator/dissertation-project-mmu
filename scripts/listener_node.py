@@ -22,7 +22,8 @@ record_seconds = 4
 # initialize PyAudio object
 p = pyaudio.PyAudio()
 
-keywords = ['alexa']
+robot_name = rospy.get_param("robot_name")
+keywords = [robot_name, 'computer']
 
 porcupine = pvporcupine.create(
     access_key='Dkio7ypK+LdtdNX6MR9ryh6CiM1tH5yCUTVwqS4J1sM5YHz0gebQPg==',

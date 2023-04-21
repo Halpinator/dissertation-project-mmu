@@ -4,6 +4,7 @@ from google.cloud import texttospeech
 import os
 import rospy
 from std_msgs.msg import String
+from playsound import playsound
 
 try:
     package_path = rospy.get_param('/turtlebot_voice_control_package_path')
@@ -41,6 +42,10 @@ def synthesize_text(text):
         # Write the response to the output file.
         out.write(response.audio_content)
         print('Audio content written to file "output.mp3"')
+
+    # Play the audio file
+    playsound(os.path.join(package_path, "output", "output.mp3"))
+    print('SPEAKING: ' + text)
 
 def callback(msg):
     synthesize_text(msg.data)

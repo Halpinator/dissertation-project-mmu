@@ -6,14 +6,14 @@ from geometry_msgs.msg import Twist
 
 def move_command(text):
     cmd = Twist()
-    if text == 'move forwards':
-        cmd.linear.x = 0.5
-    elif text == 'move backwards':
-        cmd.linear.x = -0.5
+    if text == 'move forward':
+        cmd.linear.x = 0.2
+    elif text == 'move backward':
+        cmd.linear.x = -0.2
     elif text == 'turn left':
-        cmd.angular.z = 0.5
+        cmd.angular.z = 0.2
     elif text == 'turn right':
-        cmd.angular.z = -0.5
+        cmd.angular.z = -0.2
     elif text == 'stop':
         cmd.linear.x = 0.0
         cmd.angular.z = 0.0
