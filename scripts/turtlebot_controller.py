@@ -1,28 +1,34 @@
 #!/usr/bin/env python3
 
 import rospy
+from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 
-def turtlebot3_spin():
-    rospy.init_node('turtlebot3_spin', anonymous=True)
+def move_command(text):
+    cmd = Twist()
+    if text == 'move forwards':
+        cmd.linear.x = 0.5
+    elif text == 'move backwards':
+        cmd.linear.x = -0.5
+    elif text == 'turn left':
+        cmd.angular.z = 0.5
+    elif text == 'turn right':
+        cmd.angular.z = -0.5
+    elif text == 'stop':
+        cmd.linear.x = 0.0
+        cmd.angular.z = 0.0
+    return cmd
+
+def callback(msg):
     pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+    text = msg.data
+    cmd = move_command(text)
+    pub.publish(cmd)
 
-    rate = rospy.Rate(10)  # 10 Hz
-
-    while not rospy.is_shutdown():
-        spin_msg = Twist()
-        spin_msg.linear.x = 0.0
-        spin_msg.linear.y = 0.0
-        spin_msg.linear.z = 0.0
-        spin_msg.angular.x = 0.0
-        spin_msg.angular.y = 0.0
-        spin_msg.angular.z = 1.0  # Positive value will make the robot spin clockwise
-
-        pub.publish(spin_msg)
-        rate.sleep()
+def main():
+    rospy.init_node('turtlebot_controller_node')
+    rospy.Subscriber('/voice_commands', String, callback)
+    rospy.spin()
 
 if __name__ == '__main__':
-    try:
-        turtlebot3_spin()
-    except rospy.ROSInterruptException:
-        pass
+    main()
