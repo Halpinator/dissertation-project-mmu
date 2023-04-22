@@ -6,9 +6,9 @@ from geometry_msgs.msg import Twist
 
 def move_command(text):
     cmd = Twist()
-    if text == 'move forward':
+    if text == 'move forwards':
         cmd.linear.x = 0.2
-    elif text == 'move backward':
+    elif text == 'move backwards':
         cmd.linear.x = -0.2
     elif text == 'turn left':
         cmd.angular.z = 0.2
