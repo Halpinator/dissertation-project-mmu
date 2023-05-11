@@ -24,6 +24,7 @@ def callback(msg):
     text = msg.data
     cmd = move_command(text)
     pub.publish(cmd)
+    rospy.sleep(2)
 
 def main():
     rospy.init_node('turtlebot_controller_node')
