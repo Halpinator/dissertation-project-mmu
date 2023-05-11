@@ -4,6 +4,8 @@ Language: Python
 
 Global wake word: ALEXA
 
+//Install these dependancies
+python -m pip install pvporcupine pyaudio pvrecorder speech_recognition playsound 
 
 //To open gazebo
 export TURTLEBOT3_MODEL=burger
